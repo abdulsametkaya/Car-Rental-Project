@@ -1,0 +1,868 @@
+{
+	"info": {
+		"_postman_id": "54e40ee1-ac1a-4c7e-abeb-7984f263e919",
+		"name": "GreenRent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "contactmessage",
+			"item": [
+				{
+					"name": "createContactMessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John Coffee\",\r\n    \"email\":\"john@email.com\",\r\n    \"subject\":\"What is up\",\r\n    \"body\":\"My Name is John, Thank you for everything\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/contactmessage/visitor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactmessage",
+								"visitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateContactMessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"John Coffee\",\r\n    \"email\":\"john@email.com\",\r\n    \"subject\":\"What is up\",\r\n    \"body\":\"My Name is John, Thank you for everything\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/contactmessage/visitor",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactmessage",
+								"visitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllContactMessages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/contactmessage",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"contactmessage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getContactMessageWithPath",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getContactMessageWithRequestParam",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteContactMessage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllContactMessagesWithPage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user-management",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"IronMan\",\r\n    \"lastName\": \"IronMan\",\r\n    \"password\": \"ironman\",\r\n    \"phoneNumber\": \"(541) 317-8828\",\r\n    \"email\": \"ironman@email.com\",\r\n    \"address\": \"NewYork,USA\",\r\n    \"zipCode\": \"36548\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test@email.com\",\r\n    \"password\":\"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3MTM2ODc5LCJleHAiOjE2NTcyMjMyNzl9.LyjZFVrNVLsCEJXNyvdsC4kllE6INx4D9oMdqztUKpusZ8hqLBNjS-FTX5y3KxPDjWDJre4EnlbA9mmn5pSrQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/auth/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"auth",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserBy",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByPage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMCIsImlhdCI6MTY1NzIxMzEzNywiZXhwIjoxNjU3Mjk5NTM3fQ.EHoJvtDiMUu33qFVgvVlbtrV7Eb4gLQHmlBRw_gKSgRh248jwXcs1ayw6pHBw_IaA05q-HDI584Tuyn4LlcWbw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/auth/pages?size=3&page=0&sort=id&direction=ASC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"auth",
+								"pages"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "3"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "id"
+								},
+								{
+									"key": "direction",
+									"value": "ASC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserByIdAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3MjE2OTUzLCJleHAiOjE2NTczMDMzNTN9.nS7Th1zrqMq0y6E0SMLj82gQ-XNWB-gAnvEBdrUORYFUfEbHQnkJT-VIKjHGw0fxz_NowpnTTXGm693WhUf6Ag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/3/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"3",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3MjE2OTUzLCJleHAiOjE2NTczMDMzNTN9.nS7Th1zrqMq0y6E0SMLj82gQ-XNWB-gAnvEBdrUORYFUfEbHQnkJT-VIKjHGw0fxz_NowpnTTXGm693WhUf6Ag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPassword\":\"testup2\",\r\n    \"oldPassword\":\"testup1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserByAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxMCIsImlhdCI6MTY1NzMwMTMwNywiZXhwIjoxNjU3Mzg3NzA3fQ.cNdTnpqFMZtlkUtlKat6aRqsDyvc32Rn3MhCsi9-qsekENk3VmWO83h2JUzi1h1kq3X8s52a45KxXJjQ2bCwmQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"John\",\r\n    \"lastName\": \"Coffee1\",\r\n    \"phoneNumber\": \"(541) 222-8828\",\r\n    \"email\": \"coffe123@email.com\",\r\n    \"address\": \"Minesota,USA\",\r\n    \"zipCode\": \"11111\",\r\n    \"builtIn\":true,\r\n     \"roles\": [\r\n            \"Administrator\",\r\n            \"Customer\"\r\n        ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/2/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"2",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ImageFile",
+			"item": [
+				{
+					"name": "uploadImage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "downloadImage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "displayImage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllImages",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "saveCar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\": \"Cupra\",\r\n    \"doors\": 4,\r\n    \"seats\": 4,\r\n    \"luggage\": 500,\r\n    \"transmission\": \"automatic\",\r\n    \"airConditioning\": true,\r\n    \"age\": 4,\r\n    \"pricePerHour\": 400,\r\n    \"fuelType\": \"gas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/car/admin/1d2420dd-cf02-4ab0-b9a7-d1968c957d83/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"car",
+								"admin",
+								"1d2420dd-cf02-4ab0-b9a7-d1968c957d83",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCars",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getCarById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCarWithPage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateCar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservation",
+			"item": [
+				{
+					"name": "makeReservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickUpTime\":\"07/16/2022 19:00:00\",\r\n    \"dropOffTime\":\"07/17/2022 21:00:00\",\r\n    \"pickUpLocation\":\"Ankara\",\r\n    \"dropOffLocation\":\"Ankara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/reservations/add?carId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"add"
+							],
+							"query": [
+								{
+									"key": "carId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReservationByAdmin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickUpTime\":\"07/16/2022 19:00:00\",\r\n    \"dropOffTime\":\"07/17/2022 21:00:00\",\r\n    \"pickUpLocation\":\"Ankara\",\r\n    \"dropOffLocation\":\"Ankara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/reservations/add?carId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"add"
+							],
+							"query": [
+								{
+									"key": "carId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateReservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pickUpTime\":\"07/16/2022 19:00:00\",\r\n    \"dropOffTime\":\"07/17/2022 21:00:00\",\r\n    \"pickUpLocation\":\"Ankara\",\r\n    \"dropOffLocation\":\"Ankara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/reservations/add?carId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"add"
+							],
+							"query": [
+								{
+									"key": "carId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllReservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reservations/admin/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"admin",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReservationById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reservations/1/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"1",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUserReservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTEwODI5LCJleHAiOjE2NTc5OTcyMjl9.XjYUNt1mQpB_wkoLmxR2MoRzJBv_2l5hyvLI_mqkGYeqVqcEhEHbUiqsS_l_GuUILjzRrGTwQxS-KEMKLOHi2g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reservations/1/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"1",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checkCarAvailability",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "deleteReservationById",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getReservationIdAndUserId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjU3OTk3MzEwLCJleHAiOjE2NTgwODM3MTB9.UBpKkaSMsrTl8NIIdVQyD8qZcQaVr5deyvwDi9yzGPMFaU8rcNDKl5HzNvKXY9qqzYiVzFeX11OqzGaupYKnAg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reservations/4/auth",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reservations",
+								"4",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllReservationsByUserId",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "excelreports",
+			"item": [
+				{
+					"name": "getUserReport",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getCarReport",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getReservationReport",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "heroku_test",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "addCar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "addImage",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
